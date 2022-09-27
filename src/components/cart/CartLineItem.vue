@@ -30,9 +30,9 @@
 	<div class="flex py-6 sm:py-10">
 		<div class="flex-shrink-0">
 			<nuxt-img
-				v-if="item.image.url"
-				:src="item.image.url"
-				:alt="item.image.alt"
+				v-if="item.snapshot.image.url"
+				:src="item.snapshot.image.url"
+				:alt="item.snapshot.image.alt"
 				class="w-24 h-24 rounded-md object-center object-cover sm:w-48 sm:h-48"
 				loading="lazy"
 			/>
@@ -43,12 +43,12 @@
 				<div>
 					<div class="flex justify-between">
 						<h3 class="text-sm">
-							<nuxt-link :to="item.uri" class="font-medium text-gray-700 hover:text-gray-800">{{ item.title }}</nuxt-link>
+                <nuxt-link :to="item.snapshot.product.uri" class="font-medium text-gray-700 hover:text-gray-800">{{ item.snapshot.product.title }}</nuxt-link>
 						</h3>
 					</div>
 					<div class="mt-1 flex text-sm">
-						<p class="text-gray-500">{{ item.color.charAt(0).toUpperCase() + item.color.slice(1) }}</p>
-						<p class="ml-4 pl-4 border-l border-gray-200 text-gray-500 uppercase">{{ item.size }}</p>
+						<p class="text-gray-500">{{ item.snapshot.color.charAt(0).toUpperCase() + item.snapshot.color.slice(1) }}</p>
+						<p class="ml-4 pl-4 border-l border-gray-200 text-gray-500 uppercase">{{ item.snapshot.size }}</p>
 					</div>
 					<p class="mt-1 text-sm font-medium text-gray-900">{{ item.priceAsCurrency }}</p>
 				</div>

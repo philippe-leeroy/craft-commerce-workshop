@@ -23,6 +23,8 @@ class CartController extends Commerce_CartController
 
 	/**
 	 * Get a completed order based on the order number
+     *
+     * TODO use the event (?) to replicate what has been done on line #83 /modules/fc/Fc.php
 	 *
 	 * @return Response
 	 */
@@ -48,22 +50,22 @@ class CartController extends Commerce_CartController
 
 		return $this->asJson($response);
 	}
-
-	/**
-	 * Override the Commerce cartArray method so we can add custom field data to line items
-	 *
-	 * @param Order $cart
-	 * @return array
-	 */
-	protected function cartArray(Order $cart): array
-	{
-		$data = parent::cartArray($cart);
-
-		// Replace the current cart line items with the ones we have formatted to get the line item fields
-		$data['lineItems'] = $this->formatLineItems($cart);
-
-		return $data;
-	}
+//
+//	/**
+//	 * Override the Commerce cartArray method so we can add custom field data to line items
+//	 *
+//	 * @param Order $cart
+//	 * @return array
+//	 */
+//	protected function cartArray(Order $cart): array
+//	{
+//		$data = parent::cartArray($cart);
+//
+//		// Replace the current cart line items with the ones we have formatted to get the line item fields
+//		$data['lineItems'] = $this->formatLineItems($cart);
+//
+//		return $data;
+//	}
 
 	/**
 	 * Format Commerce cart/order line item data to get custom field values

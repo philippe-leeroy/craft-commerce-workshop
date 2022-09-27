@@ -194,3 +194,10 @@ There is a test discount code already set up.
 
 Use code **GIVEME10** for a sweet 10% off an imaginary product in the imaginary store! Thank us later.
 
+## PHILIPPELEEROY and John Ripmeester changes
+All files modified from the original version are
+
+- modules/fc/Fc.php
+- modules/fc/controllers/CartController.php
+- src/components/cart/CartLineItem.vue
+- src/components/checkout/CheckoutLineItem.vue

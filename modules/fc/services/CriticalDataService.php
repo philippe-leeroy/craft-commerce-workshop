@@ -40,12 +40,13 @@ class CriticalDataService extends Component {
             $newGateway = [];
 
             foreach ($gateway as $k => $v) {
+                // Needs to be corrected... call the settings method ???
                 if (preg_match('/^\$[A-Z0-9_]/', $v)) {
                     $v = getenv(str_replace('$', '', $v));
                 }
 
                 if ($k === 'handle' && $v === 'paypal') {
-                    $newGateway['redirect']  = Craft::$app->getSecurity()->hashData('/order?number={number}');
+                    $newGateway['redirect']  = Craft::$app->getSecurity()->hashData('/order?number={number}'); // It's hashed to protect data
                     $newGateway['cancelUrl'] = Craft::$app->getSecurity()->hashData('/checkout');
                 }
 

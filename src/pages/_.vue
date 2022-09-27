@@ -28,7 +28,7 @@
 				EntriesPages,
 				{
 					limit: 1,
-					uri: route.params.pathMatch,
+					uri: route.params.pathMatch, /* Use that instead of slug because of the nesting can give duplicate slug */
 					allowDraft
 				},
 				previewParams
@@ -58,6 +58,7 @@
 
 <template>
 	<div>
+<!-- V else for 404 -->
 		<component v-if="entry" :is="pageViewComponent" :entry="entry" />
 	</div>
 </template>

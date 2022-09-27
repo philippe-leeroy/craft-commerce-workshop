@@ -14,7 +14,7 @@ const api = ({$axios}, $config, store) => {
 	const withDefaultConfig = (requestConfig = {}) => {
 		return {
 			...requestConfig,
-			withCredentials: true,
+			withCredentials: true, // making sure the cookies for session is passed
 			headers: {
 				'X-Requested-With': 'XMLHttpRequest',
 				'Content-Type': 'application/x-www-form-urlencoded',
@@ -74,7 +74,7 @@ const api = ({$axios}, $config, store) => {
 			const data = {
 				query: print(query),
 				variables,
-				params,
+				params, // not used ?
 			};
 			const response = await $axios.post(`/graphql`,
 				data,

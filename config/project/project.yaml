@@ -1,4 +1,4 @@
-dateModified: 1664227670
+dateModified: 1664292850
 elementSources:
   craft\commerce\elements\Product:
     -
@@ -55,6 +55,7 @@ meta:
     1b39f5a2-15c0-4af0-be7c-0735aba76665: Text # Text
     1b753347-9223-47d6-8349-fc1c7c290ea1: 'Product Categories' # Product Categories
     1bd188af-6bf7-4544-9e2e-f5e4052cefd1: Assets # Assets
+    3a8b317b-452d-49ee-95f8-29a6357869b7: Default # Default
     3f16d68f-cda8-49f7-8564-ba9db1855669: Pages # Pages
     4dc80b48-acd0-45f5-abdd-abe4eadce58e: Size # Size
     6cbc0418-8b1f-411b-aa21-4937acf9bc1a: 'Credit Card' # Credit Card
@@ -75,6 +76,7 @@ meta:
     430acb24-9641-4661-b62e-0cdc21c0fe56: 'Menu Item' # Menu Item
     460addb0-40aa-48c7-ac8c-21f2f621ffbb: 'Site Schema' # Site Schema
     652c2871-27c1-4b30-8190-0a05255eb19b: Relations # Relations
+    2224dfcb-d3c2-4069-9d93-b8ce952b3401: Blog # Blog
     4188fa88-45c2-4d45-bc06-3a135bab0725: Collection # Collection
     6208c751-b47b-4315-ac54-cd1f33debd7a: Images # Images
     7434a2d9-23f7-4206-84fa-f1bbad8be64f: Keywords # Keywords

@@ -54,6 +54,7 @@ export default {
   },
 
   // Nuxt http options : https://http.nuxtjs.org/options
+  // This allows to have simple nginx configs and avoid CORS errors .?. THE PROXY=true
   axios: {
     proxyHeaders: false,
     credentials: true,
@@ -69,7 +70,7 @@ export default {
 		// This will proxy https://<nuxt host>/graphql to https://<craft host>/graphql. The proxy module will include
 		// the /graphql path unless it's explicitly removed with pathRewrite.
 		'/graphql': { target: process.env.CRAFT_BASE_URL, secure: !isDev },
-    '/*sitemap.xml': process.env.CRAFT_BASE_URL,
+    '/*sitemap.xml': process.env.CRAFT_BASE_URL, /** SEOMATIC **/
     '/*sitemap.xsl': process.env.CRAFT_BASE_URL,
     '/sitemap.xml': process.env.CRAFT_BASE_URL,
     '/sitemap.xsl': process.env.CRAFT_BASE_URL,
